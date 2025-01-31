@@ -47,3 +47,8 @@
     php artisan serve
     ng serve
     ```
+8. Exisiting Database file
+
+     ```bash
+    laravelcd.sql
+    ```
