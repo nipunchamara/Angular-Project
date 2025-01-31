@@ -5,7 +5,7 @@
 
 1. Clone this project
     ```bash
-    [git clone https://github.com/janitha479/IT_251_Group_02](https://github.com/nipunchamara/Angular-Project.git)
+    https://github.com/nipunchamara/Angular-Project.git
     ```
 2. Install dependencies
 
