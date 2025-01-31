@@ -1,18 +1,49 @@
-# Laravel and Angular Project
+# Student Management System Unit Test-1 
+# Using Laravel and Angular
 
-This repository contains both the **Laravel** backend and the **Angular** frontend for the Student Management System.
+## Installation
 
-# Run database migrations
-php artisan migrate
+1. Clone this project
+    ```bash
+    [git clone https://github.com/janitha479/IT_251_Group_02](https://github.com/nipunchamara/Angular-Project.git)
+    ```
+2. Install dependencies
 
-# Run the Laravel development server
-php artisan serve
+    ```bash
+    composer install
+    ```
 
-# Run the Angular development server
-ng serve
+    And javascript dependencies
 
-yarn install && yarn dev
+    ```bash
 
-#OR
+    npm install && npm run dev
+    ```
 
-npm install && npm run dev
+3. Set up Laravel configurations
+
+    ```bash
+    copy .env.example .env
+    ```
+
+4. Set your database in .env
+
+5. Migrate database
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. Build the application
+
+    ```bash
+    npm run build
+    npm run dev
+    ```
+
+7. Serve the application
+
+    ```bash
+    php artisan serve
+    ng serve
+    ```
