@@ -1,0 +1,218 @@
+<div class="home-container d-flex flex-column align-items-center justify-content-center text-center">
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="content">
+        <h1 class="display-4 fw-bold text-white">Student Management System</h1>
+        <h2 class="campus-title">SIBA-CAMPUS</h2><br>
+        <a routerLink="/about-us" class="cta-btn">Learn More</a>
+    </div>
+
+    <div class="features-container mt-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h3>Student Profiles</h3>
+                    <p>Comprehensive student profiles with academic records, attendance tracking, and performance analytics.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+                    <h3>Course Management</h3>
+                    <p>Efficient course scheduling, enrollment management, and real-time timetable updates.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line fa-3x mb-3"></i>
+                    <h3>Advanced Analytics</h3>
+                    <p>Detailed reports and data visualizations for informed decision-making and institutional growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+    }
+
+    .home-container {
+        min-height: 100vh;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: linear-gradient(135deg, #0072ff, #00c6ff, #2575fc, #6a11cb);
+        background-size: 400% 400%;
+        animation: gradientBg 15s ease infinite;
+        overflow: hidden;
+    }
+
+    .particles {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .particles .particle {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        animation: particleMotion 10s linear infinite;
+    }
+
+    .particles .particle:nth-child(1) {
+        top: 20%;
+        left: 25%;
+        animation-delay: 0s;
+    }
+
+    .particles .particle:nth-child(2) {
+        top: 60%;
+        left: 75%;
+        animation-delay: 3s;
+    }
+
+    .particles .particle:nth-child(3) {
+        top: 45%;
+        left: 50%;
+        animation-delay: 5s;
+    }
+
+    .content {
+        z-index: 1;
+        text-align: center;
+        color: white;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
+        background-color: white;
+        color: #0072ff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+        background-color: #0072ff;
+        color: white;
+    }
+
+    .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 0.8s ease-out 0.9s backwards;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        padding: 2rem;
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card h3 {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .feature-card i {
+        color: rgba(255, 255, 255, 0.9);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover i {
+        transform: scale(1.1);
+    }
+
+    @keyframes gradientBg {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes particleMotion {
+        0% { transform: translate(0, 0); opacity: 1; }
+        50% { transform: translate(100px, 50px); opacity: 0.5; }
+        100% { transform: translate(0, 100px); opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+        .content h1 {
+            font-size: 2.5rem;
+        }
+
+        .cta-btn {
+            padding: 0.8rem 2.5rem;
+        }
+
+        .features-container {
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            min-height: auto;
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

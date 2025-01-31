@@ -1,0 +1,112 @@
+<div class="content">
+  <h1>Add Students Records</h1>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h4>Create Student
+          <a routerLink="/students" class="btn btn-primary float-end" style="color: white;">Go To Home</a>
+        </h4>
+      </div>
+      <div class="card-body">
+        <div *ngIf="isLoading; else elseForm">
+          <app-loader :title="loadingTitle" />
+        </div>
+        <ng-template #elseForm>
+          <form (ngSubmit)="saveStudent()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" [(ngModel)]="name" class="form-control" id="name" name="name">
+              <span class="text-danger" *ngIf="errors.name">{{errors.name}}</span>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" [(ngModel)]="address" class="form-control" id="address" name="address">
+              <span class="text-danger" *ngIf="errors.address">{{errors.address}}</span>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="text" [(ngModel)]="phone" class="form-control" id="phone" name="phone">
+              <span class="text-danger" *ngIf="errors.phone">{{errors.phone}}</span>
+            </div>
+            <div class="mb-3">
+              <label for="parent" class="form-label">Parent Name</label>
+              <input type="text" [(ngModel)]="parent" class="form-control" id="parent" name="parent">
+              <span class="text-danger" *ngIf="errors.parent">{{errors.parent}}</span>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-success">Save Details</button>
+            </div>
+          </form>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+    .content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .card-header {
+    background: #022d49;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .card-header .btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  }
+
+  .btn-success {
+    background: #27ae60;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-success:hover {
+    background: #219150;
+    transform: translateY(-2px);
+  }
+</style>
