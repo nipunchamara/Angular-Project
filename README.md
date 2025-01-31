@@ -2,5 +2,5 @@
 php artisan migrate
 
 # Run both laravel and angular folders
-php artisan sere
+php artisan serve
 ng serve
